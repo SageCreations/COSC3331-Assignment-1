@@ -27,7 +27,8 @@ public class Main {
             arraySet setOne = new arraySet(arraySize);
             arraySet setTwo = new arraySet(arraySize);
 
-            //TODO: left off here!!!
+            //System.out.println(setOne.set.length);
+            setOne.Display();
 
             // give user the option to continue testing or not.
             System.out.print("\nWould you like to continue the program, (Y (yes) or N (no)): ");
