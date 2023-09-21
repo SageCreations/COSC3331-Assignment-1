@@ -30,7 +30,7 @@ public class arraySet {
         Random Rand = new Random();
         for (int i = 0; i < set.length; i++) {
             int randomNumber = Rand.nextInt(set.length * 2) + 1;    // random int within range [1, arraySize * 2]
-            // TODO: research ways to keep track of elements already in the set so to not repeat duplicated
+            //TODO: research ways to keep track of elements already in the set so to not repeat duplicated
             // other idea was to just start a linearCheck with a second for loop (not optimal at all lol)
 
 
