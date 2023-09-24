@@ -7,6 +7,8 @@ public class Main {
 
         int arraySize;  // variable that the user needs to set for the array sizes.
 
+        SetLibrary sets = new SetLibrary(); // instantiate for set related functions
+
         // main loop of program
         do {
             // Prompt user for the array sizes and must be less than 50.
@@ -24,11 +26,17 @@ public class Main {
             } while (!correctSize);
 
             // Create the Two sets
-            arraySet setOne = new arraySet(arraySize);
-            arraySet setTwo = new arraySet(arraySize);
+            arraySet setOne = new arraySet("Set A", arraySize, true);
+            arraySet setTwo = new arraySet("Set B", arraySize, true);
 
-            //System.out.println(setOne.set.length);
+
             setOne.Display();
+            setTwo.Display();
+
+
+            // union between set one & two
+            arraySet unionSet = sets.UnionSet(setOne, setTwo, arraySize);
+            unionSet.Display();
 
             // give user the option to continue testing or not.
             System.out.print("\nWould you like to continue the program, (Y (yes) or N (no)): ");
