@@ -14,6 +14,7 @@ public class arraySet {
         //Go ahead and populate the array on instantiation since there is only one set of rules for the sets.
         if (populate) {
             PopulateArray();
+            BubbleSort();
         }
     }
 
@@ -25,7 +26,7 @@ public class arraySet {
         return nElems;
     }
 
-    public void insert(int value)
+    public void Insert(int value)
     {
         set[nElems] = value;
         nElems++;
@@ -37,7 +38,7 @@ public class arraySet {
         for (int j = 0; j<nElems; j++) {
             System.out.print(set[j] + " ");
         }
-        System.out.println(" ");
+        System.out.println("");
     }
 
     private void PopulateArray() {
@@ -61,7 +62,7 @@ public class arraySet {
             if (isRepeated) {
                 --i;    // decrement i so that next iteration of the for-loop ends up repeating instead
             } else {
-                insert(randomNumber);
+                Insert(randomNumber);
             }
         }
     }
