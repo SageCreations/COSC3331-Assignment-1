@@ -1,12 +1,11 @@
 public class SetLibrary {
 
-    // TODO: Define the union set
     public arraySet UnionSet(arraySet SetOne, arraySet SetTwo) {
         // get max size for the returning set
         int arraySize = GetArraySize(SetOne.GetNumElems(), SetTwo.GetNumElems());
 
         // instantiate the union set
-        arraySet unionSet = new arraySet("A ∪ B", (arraySize * 2) + 1, false);
+        arraySet unionSet = new arraySet("The Union of two sets A and B", (arraySize * 2) + 1, false);
 
         // Based off of the counting sort algo
         int[] C = new int[(arraySize * 2) + 1]; // + 1 so we can get 0 index plus the max number an element can be
@@ -21,13 +20,12 @@ public class SetLibrary {
         return unionSet;
     }
 
-    // TODO: Define the intersection of these sets
     public arraySet IntersectionSet(arraySet SetOne, arraySet SetTwo) {
         // get max size for the returning set
         int arraySize = GetArraySize(SetOne.GetNumElems(), SetTwo.GetNumElems());
 
         // instantiate the intersection set
-        arraySet intersectionSet = new arraySet("A ∩ B", arraySize, false);
+        arraySet intersectionSet = new arraySet("The Intersection of two sets A and B", arraySize, false);
 
         // simple double nested iteration, linear check
         for (int A: SetOne.GetArray()) {
@@ -42,7 +40,7 @@ public class SetLibrary {
         return intersectionSet;
     }
 
-    // TODO: verify whether one of these sets is a subset of the other or not
+    // This is extremely gross but need to meet the deadline.
     public void SubsetVerify(arraySet SetOne, arraySet SetTwo) {
         // NOTE: need to finish this to work on other stuff so keep it simple
         boolean isSubset = true;
@@ -85,13 +83,13 @@ public class SetLibrary {
             }
 
             if (isSubset) {
-                System.out.println("B ⊆ A: B is a subset of or equal to A");
+                System.out.println("B is a subset of or equal to A");
             } else {
-                System.out.println("A ⊈ B: A is neither a Subset of nor Equal To B");
+                System.out.println("A is neither a Subset of nor Equal To B");
             }
 
         } else {
-            System.out.println("A ⊆ B: A is a subset of or equal to B");
+            System.out.println("A is a subset of or equal to B");
         }
     }
 

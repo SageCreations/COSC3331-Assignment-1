@@ -34,11 +34,15 @@ public class arraySet {
 
     public void Display()
     {
-        System.out.print(setName + ": ");
+        System.out.print(setName + ": {");
         for (int j = 0; j<nElems; j++) {
-            System.out.print(set[j] + " ");
+            if (j == nElems - 1) {
+                System.out.print(set[j]);
+            } else {
+                System.out.print(set[j] + ", ");
+            }
         }
-        System.out.println("");
+        System.out.println("}");
     }
 
     private void PopulateArray() {

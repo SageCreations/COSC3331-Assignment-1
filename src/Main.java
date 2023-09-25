@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+
+/*  TODO: Known bugs:
+ *  1. Bubble sort might be missing a check in miscalculated for loop iteration.
+ *     Saw a "2" precede a "1" in a set but confirmed it did not affect any of the SetLibrary calculations.
+ *  2. ?
+ *
+ */
+
 public class Main {
     public static void main(String[] args) {
         String yes; // used to control main loop
@@ -27,6 +35,7 @@ public class Main {
                 }
             } while (!correctSize);
 
+            // repeat for second arraySet size
             correctSize = false;
             do {
                 System.out.print("\nPlease pick a size for the Second Array (size must between 1-50): ");
@@ -77,5 +86,7 @@ public class Main {
             System.out.print("\nWould you like to continue the program, (Y (yes) or N (no)): ");
             yes = reader.nextLine().toLowerCase();
         } while (yes.equals("y") || yes.equals("yes"));
+
+        reader.close();
     }
 }
